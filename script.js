@@ -4,6 +4,7 @@ class RockPaperScissors
         this.choice = ['rock', 'paper', 'scissors'];
         this.playerScore = 0;
         this.computerScore = 0;
+        this.round = 0;
     }
 
     // Logic for computer to choose a hand at random
@@ -17,20 +18,23 @@ class RockPaperScissors
         const computerChoice = this.getComputerChoice();
 
         if (playerChoice === computerChoice){
+            this.round++;
             this.updateScoreDisplay();
             document.getElementById('round-result').textContent = "It's a tie!"
             return;
         }
         
-        if(
+        if (
             (playerChoice === 'rock' && computerChoice === 'scissors') ||
             (playerChoice === 'paper' && computerChoice === 'rock') ||
             (playerChoice === 'scissors' && computerChoice === 'rock') 
         ) {
+            this.round++;
             this.playerScore++;
             this.updateScoreDisplay();
             document.getElementById('round-result').textContent = "You win!";
         } else {
+            this.round++;
             this.computerScore++;
             this.updateScoreDisplay();
             document.getElementById('round-result').textContent = "You lose!";
@@ -41,6 +45,7 @@ class RockPaperScissors
     updateScoreDisplay() {
         document.getElementById('player-score').textContent = this.playerScore;
         document.getElementById('computer-score').textContent = this.computerScore;
+        document.getElementById('round-count').textContent = "Round: " + this.round;
     }
 }
 
