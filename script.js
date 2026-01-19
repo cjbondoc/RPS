@@ -27,7 +27,7 @@ class RockPaperScissors
         if (
             (playerChoice === 'rock' && computerChoice === 'scissors') ||
             (playerChoice === 'paper' && computerChoice === 'rock') ||
-            (playerChoice === 'scissors' && computerChoice === 'rock') 
+            (playerChoice === 'scissors' && computerChoice === 'paper') 
         ) {
             this.round++;
             this.playerScore++;
