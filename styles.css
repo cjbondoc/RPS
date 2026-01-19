@@ -39,7 +39,9 @@ button {
     margin-right: 10px;
 }
 
-#player-stats, #computer-stats {
+#player-stats, 
+#computer-stats, 
+#round-result {
     font-size: 36px;
 }
 

@@ -17,7 +17,9 @@ class RockPaperScissors
         const computerChoice = this.getComputerChoice();
 
         if (playerChoice === computerChoice){
-            return "It's a tie!"
+            this.updateScoreDisplay();
+            document.getElementById('round-result').textContent = "It's a tie!"
+            return;
         }
         
         if(
@@ -27,11 +29,11 @@ class RockPaperScissors
         ) {
             this.playerScore++;
             this.updateScoreDisplay();
-            return "You win!";
+            document.getElementById('round-result').textContent = "You win!";
         } else {
             this.computerScore++;
             this.updateScoreDisplay();
-            return "You lose!";
+            document.getElementById('round-result').textContent = "You lose!";
         }
     }
 
