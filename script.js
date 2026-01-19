@@ -26,19 +26,24 @@ class RockPaperScissors
             (playerChoice === 'scissors' && computerChoice === 'rock') 
         ) {
             this.playerScore++;
+            this.updateScoreDisplay();
             return "You win!";
         } else {
             this.computerScore++;
+            this.updateScoreDisplay();
             return "You lose!";
         }
     }
 
-    getPlayerScore(){
-        return this.playerScore()
+    // Updates the score in the HTML file after a round
+    updateScoreDisplay() {
+        document.getElementById('player-score').textContent = this.playerScore;
+        document.getElementById('computer-score').textContent = this.computerScore;
     }
-
-    getComputerScore(){
-        return this.computerScore()
-    }
-
 }
+
+
+const game = new RockPaperScissors();
+
+
+

@@ -34,7 +34,7 @@ button {
     margin-right: 10px;
 }
 
-#player-score, #computer-score {
+#player-stats, #computer-stats {
     font-size: 36px;
 }
 
