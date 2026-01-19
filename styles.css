@@ -49,8 +49,7 @@ button {
 }
 
 #player-stats, 
-#computer-stats, 
-#round-result {
+#computer-stats {
     font-size: 36px;
 }
 
@@ -60,4 +59,8 @@ button {
     flex-wrap: wrap;
     margin: 20px;
     gap: 20px;
+}
+
+.round-message {
+    font-size: 28px;
 }
