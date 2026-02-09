@@ -51,6 +51,24 @@ class RockPaperScissors
 
 
 const game = new RockPaperScissors();
+const buttons = document.querySelectorAll('.choices button');
 
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+    const target = e.currentTarget.id;
 
+    switch(target) {
+        case 'rock':
+            game.playRound('rock');
+            break;
+        case 'paper':
+            game.playRound('paper');
+            break;
+        case 'scissors':
+            game.playRound('scissors');
+            break;
+
+        }
+    });
+});
 
