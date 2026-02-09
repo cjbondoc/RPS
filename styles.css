@@ -28,9 +28,13 @@ button {
     padding: 40px;
     cursor: pointer;
     margin-top: 20px;
-    border: 3px solid slategray;
+    border: 6px solid slategray;
     background: none;
-    border-radius: 50%;
+    border-radius: 99999px;
+}
+
+button.pressed {
+    border: 6px solid red;
 }
 
 

@@ -65,6 +65,12 @@ const buttons = document.querySelectorAll('.choices button');
 buttons.forEach(button => {
     button.addEventListener('click', (e) => {
     const target = e.currentTarget.id;
+    const btn = e.currentTarget;
+
+    btn.classList.add('pressed');
+    setTimeout(() => {
+        btn.classList.remove('pressed');
+    }, 200);
 
     switch(target) {
         case 'rock':
